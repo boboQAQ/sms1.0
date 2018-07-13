@@ -1,5 +1,5 @@
 package com.briup.app02.bean;
-
+//hehehe
 public class Course {
 	private Long id;
 	private String courseName;
