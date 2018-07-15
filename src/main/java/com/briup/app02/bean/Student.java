@@ -1,7 +1,5 @@
 package com.briup.app02.bean;
 
-import com.google.common.base.Predicate;
-
 public class Student {
 	private Long id;
 	private String name;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.GradeMapper">
+
+
+
+  <select id="findGradeAll" resultType="com.briup.app02.bean.Grade">
+    select * from poll_grade
+  </select>
+
+  <select id="findGradeById" parameterType="long" resultType="com.briup.app02.bean.Grade">
+    select * from poll_grade where id=#{id}
+  </select>
+  
+  
+  
+
+  <insert id="insertGrade" parameterType="com.briup.app02.bean.Grade">
+  insert into poll_grade  	
+  values (#{id},#{name},#{description})
+</insert>
+
+
+
+<update id="updateGrade" parameterType="com.briup.app02.bean.Grade">
+  update poll_grade set
+    name = #{name},
+    description = #{description}
+    
+    
+  where id = #{id}
+</update>
+
+
+<delete id="deleteGrade" parameterType="long">
+  delete from poll_grade where id = #{id}
+</delete>
+
+
+
+
+</mapper>

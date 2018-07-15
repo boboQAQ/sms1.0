@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.QQMapper">
+
+
+
+  <select id="findQQAll" resultType="com.briup.app02.bean.QQ">
+    select * from poll_qq
+  </select>
+
+  <select id="findQQById" parameterType="long" resultType="com.briup.app02.bean.QQ">
+    select * from poll_qq where id=#{id}
+  </select>
+  
+  
+  
+
+  <insert id="insertQQ" parameterType="com.briup.app02.bean.QQ">
+  insert into poll_qq 	
+  values (#{id},#{question_id},#{questionnaire_id})
+</insert>
+
+
+
+<update id="updateQQ" parameterType="com.briup.app02.bean.QQ">
+  update poll_qq set
+    question_id = #{question_id},
+    
+    questionnaire_id =#{questionnaire_id}
+    
+  where id = #{id}
+</update>
+
+
+<delete id="deleteQQ" parameterType="long">
+  delete from poll_qq where id = #{id}
+</delete>
+
+
+
+
+</mapper>

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.briup.app02.bean.Student;
 import com.briup.app02.service.IStudentService;
-import com.briup.app02.service.impl.StudentServiceImpl;
 import com.briup.app02.util.MsgResponse;
 
 @RestController
