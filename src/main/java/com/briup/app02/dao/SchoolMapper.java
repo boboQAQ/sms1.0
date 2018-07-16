@@ -8,7 +8,7 @@ public interface SchoolMapper {
 	List<School> findSchoolAll();
 	School findSchoolById(Long id);
 	void updateSchool(School school);
-	void insertSchool(School school);
+	void saveSchool(School school);
 	void deleteSchool(Long id);
 
 }

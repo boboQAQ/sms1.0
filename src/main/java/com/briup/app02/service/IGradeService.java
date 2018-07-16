@@ -8,6 +8,6 @@ public interface IGradeService {
 	List<Grade> findGradeAll()throws Exception;
 	Grade findGradeById(Long id)throws Exception;
 	void updateGrade(Grade grade)throws Exception;
-	void insertGrade(Grade grade)throws Exception;
+	void saveGrade(Grade grade)throws Exception;
 	void deleteGrade(Long id)throws Exception;
 }

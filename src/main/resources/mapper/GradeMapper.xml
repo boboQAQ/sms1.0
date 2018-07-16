@@ -17,7 +17,7 @@
   
   
 
-  <insert id="insertGrade" parameterType="com.briup.app02.bean.Grade">
+  <insert id="saveGrade" parameterType="com.briup.app02.bean.Grade">
   insert into poll_grade  	
   values (#{id},#{name},#{description})
 </insert>

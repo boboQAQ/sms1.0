@@ -9,6 +9,6 @@ public interface SurveyMapper {
 	List<Survey> findSurveyAll();
 	Survey findSurveyById(Long id);
 	void updateSurvey(Survey survey);
-	void insertSurvey(Survey survey);
+	void saveSurvey(Survey survey);
 	void deleteSurvey(Long id);
 }

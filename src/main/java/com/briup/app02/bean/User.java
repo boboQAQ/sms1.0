@@ -2,6 +2,7 @@ package com.briup.app02.bean;
 
 public class User {
 	private Long id;
+
 	public Long getId() {
 		return id;
 	}
@@ -26,14 +27,14 @@ public class User {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
-	public String getHairedate() {
-		return hairedate;
+	public String getHiredate() {
+		return hiredate;
 	}
-	public void setHairedate(String hairedate) {
-		this.hairedate = hairedate;
+	public void setHiredate(String hiredate) {
+		this.hiredate = hiredate;
 	}
 	private String name;
 	private String gender;
 	private String birth;
-	private String hairedate;
+	private String hiredate;
 }

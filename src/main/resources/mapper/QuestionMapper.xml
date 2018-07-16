@@ -17,18 +17,18 @@
   
   
 
-  <insert id="insertQuestion" parameterType="com.briup.app02.bean.Question">
+  <insert id="saveQuestion" parameterType="com.briup.app02.bean.Question">
   insert into poll_question 	
   values (#{id},#{name},#{questiontype})
 </insert>
 
 
 
-<update id="updateQusetion" parameterType="com.briup.app02.bean.Question">
+<update id="updateQuestion" parameterType="com.briup.app02.bean.Question">
   update poll_question set
     name = #{name},
    
-    questiontype =#{questiontype}
+    questiontype = #{questiontype}
     
   where id = #{id}
 </update>

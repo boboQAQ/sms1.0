@@ -8,6 +8,6 @@ public interface CourseMapper {
 	List<Course> findCourseAll();
 	Course findCourseById(Long id);
 	void updateCourse(Course course);
-	void insertCourse(Course course);
+	void saveCourse(Course course);
 	void deleteCourse(Long id);
 }

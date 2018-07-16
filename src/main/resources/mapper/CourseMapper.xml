@@ -6,7 +6,7 @@
 
 
 
-  <select id="Couurse" resultType="com.briup.app02.bean.Course">
+  <select id="findCourseAll" resultType="com.briup.app02.bean.Course">
     select * from poll_course
   </select>
 
@@ -17,7 +17,7 @@
   
   
 
-  <insert id="insertCourse" parameterType="com.briup.app02.bean.Course">
+  <insert id="saveCourse" parameterType="com.briup.app02.bean.Course">
   insert into poll_course  	
   values (#{id},#{name},#{description},#{period})
 </insert>

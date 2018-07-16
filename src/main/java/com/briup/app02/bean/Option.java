@@ -28,5 +28,12 @@ public class Option {
 	}
 	private String label;
 	private String content;
+	private Long question_id;
+	public Long getQuestion_id() {
+		return question_id;
+	}
+	public void setQuestion_id(Long question_id) {
+		this.question_id = question_id;
+	}
 	private int score;
 }

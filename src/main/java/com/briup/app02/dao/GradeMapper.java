@@ -8,6 +8,6 @@ public interface GradeMapper {
 	List<Grade> findGradeAll();
 	Grade findGradeById(Long id);
 	void updateGrade(Grade grade);
-	void insertGrade(Grade grade);
+	void saveGrade(Grade grade);
 	void deleteGrade(Long id);
 }

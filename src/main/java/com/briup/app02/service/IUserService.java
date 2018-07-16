@@ -8,6 +8,6 @@ public interface IUserService {
 	List<User> findUserAll()throws Exception;
 	User findUserById(Long id)throws Exception;
 	void updateUser(User user)throws Exception;
-	void insertUser(User user)throws Exception;
+	void saveUser(User user)throws Exception;
 	void deleteUser(Long id)throws Exception;
 }

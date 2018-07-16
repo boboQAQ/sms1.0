@@ -10,6 +10,6 @@ public interface QuestionMapper {
 	List<Question> findQuestionAll();
 	Question findQuestionById(Long id);
 	void updateQuestion(Question question);
-	void insertQuestion(Question question);
-	void deleteQquestion(Long id);
+	void saveQuestion(Question question);
+	void deleteQuestion(Long id);
 }

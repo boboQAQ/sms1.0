@@ -8,6 +8,6 @@ public interface ISurveyService {
 	List<Survey> findSurveyAll()throws Exception;
 	Survey findSurveyById(Long id)throws Exception;
 	void updateSurvey(Survey survey)throws Exception;
-	void insertSurvey(Survey survey)throws Exception;
+	void saveSurvey(Survey survey)throws Exception;
 	void deleteSurvey(Long id)throws Exception;
 }

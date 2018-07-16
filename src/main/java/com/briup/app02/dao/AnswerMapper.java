@@ -23,7 +23,7 @@ public interface AnswerMapper {
 	 * @return
 	 * @author 波波
 	 */
-	void insertAnswer(Answer answer);
+	void saveAnswer(Answer answer);
 	/**
 	 * @更新学生信息
 	 * @return

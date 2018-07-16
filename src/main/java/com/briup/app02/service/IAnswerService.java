@@ -9,10 +9,12 @@ public interface IAnswerService {
 	
 	Answer findAnswerById(Long id)throws Exception;
 	
-	void insertAnswer(Answer answer)throws Exception;
+	void saveAnswer(Answer answer)throws Exception;
 
 	void updateAnswer (Answer answer)throws Exception;
 
-	void deleteAnswer (long id)throws Exception;
+	void deleteAnswer (	Long id)throws Exception;
+
+	
 
 }

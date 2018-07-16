@@ -8,6 +8,6 @@ public interface ClazzMapper {
 	List<Clazz> findClazzAll();
 	Clazz findClazzById(Long id);
 	void updateClazz(Clazz clazz);
-	void insertClazz(Clazz clazz);
+	void saveClazz(Clazz clazz);
 	void deleteClazz(Long id);
 }

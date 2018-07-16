@@ -8,6 +8,6 @@ public interface IQuestionService {
 	List<Question> findQuestionAll()throws Exception;
 	Question findQuestionById(Long id)throws Exception;
 	void updateQuestion(Question question)throws Exception;
-	void insertQuestion(Question question)throws Exception;
-	void deleteQquestion(Long id)throws Exception;
+	void saveQuestion(Question question)throws Exception;
+	void deleteQuestion(Long id)throws Exception;
 }

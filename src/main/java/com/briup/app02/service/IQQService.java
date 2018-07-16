@@ -8,6 +8,6 @@ public interface IQQService {
 	List<QQ> findQQAll()throws Exception;
 	QQ findQQById(Long id)throws Exception;
 	void updateQQ(QQ qq)throws Exception;
-	void insertQQ(QQ qq)throws Exception;
+	void saveQQ(QQ qq)throws Exception;
 	void deleteQQ(Long id)throws Exception;
 }

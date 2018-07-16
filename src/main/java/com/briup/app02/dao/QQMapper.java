@@ -10,6 +10,6 @@ public interface QQMapper {
 	List<QQ> findQQAll();
 	QQ findQQById(Long id);
 	void updateQQ(QQ qq);
-	void insertQQ(QQ qq);
+	void saveQQ(QQ qq);
 	void deleteQQ(Long id);
 }

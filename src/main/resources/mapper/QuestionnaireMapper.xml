@@ -17,7 +17,7 @@
   
   
 
-  <insert id="insertQuestionnaire" parameterType="com.briup.app02.bean.Questionnaire">
+  <insert id="saveQuestionnaire" parameterType="com.briup.app02.bean.Questionnaire">
   insert into poll_questionnaire 	
   values (#{id},#{name},#{description},#{createdate})
 </insert>

@@ -10,6 +10,6 @@ public interface QuestionnaireMapper {
 	List<Questionnaire> findQuestionnaireAll();
 	Questionnaire findQuestionnaireById(Long id);
 	void updateQuestionnaire(Questionnaire questionnaire);
-	void insertQuestionnaire(Questionnaire questionnaire);
+	void saveQuestionnaire(Questionnaire questionnaire);
 	void deleteQuestionnaire(Long id);
 }

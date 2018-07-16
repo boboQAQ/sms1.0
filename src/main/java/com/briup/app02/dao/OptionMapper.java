@@ -10,6 +10,6 @@ public interface OptionMapper {
 	List<Option> findOptionAll();
 	Option findOptionById(Long id);
 	void updateOption(Option option);
-	void insertOption(Option option);
+	void saveOption(Option option);
 	void deleteOption(Long id);
 }

@@ -17,7 +17,7 @@
   
   
 
-  <insert id="insertOption" parameterType="com.briup.app02.bean.Option">
+  <insert id="saveOption" parameterType="com.briup.app02.bean.Option">
   insert into poll_option 	
   values (#{id},#{label},#{content},#{score},#{question_id})
 </insert>

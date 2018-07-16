@@ -17,7 +17,7 @@
   
   
 
-  <insert id="insertQQ" parameterType="com.briup.app02.bean.QQ">
+  <insert id="saveQQ" parameterType="com.briup.app02.bean.QQ">
   insert into poll_qq 	
   values (#{id},#{question_id},#{questionnaire_id})
 </insert>
