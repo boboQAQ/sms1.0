@@ -23,7 +23,7 @@ public class GradeServiceImpl implements IGradeService {
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_grade为空");
 		}
 	}
 

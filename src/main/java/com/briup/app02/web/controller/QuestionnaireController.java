@@ -9,14 +9,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.briup.app02.bean.Questionnaire;
+import com.briup.app02.bean.vm.QuestionnaireVM;
 import com.briup.app02.service.IQuestionnaireService;
 import com.briup.app02.util.MsgResponse;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+@Api(description="调查问卷相关接口")
 @RestController
 @RequestMapping("/questionnaire")
 public class QuestionnaireController {
 	@Autowired
 	private IQuestionnaireService questionnaireService;
+	@ApiOperation(value="查询所有调查问卷"
+			,notes="只能查询出问卷信息，并且级联查询到问卷上的题目及选项")
+	
+	@GetMapping("findAllQuestionnaireVM")
+	public MsgResponse findAllQuestionnaireVM() {
+		try {
+			List<QuestionnaireVM> list = questionnaireService.findAllQuestionnaireVM();
+			return MsgResponse.success("查询成功",list );
+		}catch(Exception e) {
+			e.printStackTrace();
+			return MsgResponse.error(e.getMessage());
+		}
+	}
+	
+	
+	
 	@GetMapping("findQuestionnaireAll")
 	public MsgResponse findQuestionnaireAll() {
 		try {
@@ -28,6 +48,18 @@ public class QuestionnaireController {
 		}
 	}
 	
+	@ApiOperation(value="查询某个调查问卷"
+			,notes="只能查询出问卷信息，并且级联查询到问卷上的题目")
+	@GetMapping("findQuestionnaireByIdVM")
+	public MsgResponse findQuestionnaireByIdVM(Long id) {
+		try {
+			QuestionnaireVM questionnaire = questionnaireService.findQuestionnaireByIdVM(id);
+			return MsgResponse.success("查询成功", questionnaire);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return MsgResponse.error(e.getMessage());
+		}
+	}
 	@GetMapping("findQuestionnaireById")
 	public MsgResponse findQuestionnaireById(Long id) {
 		try {

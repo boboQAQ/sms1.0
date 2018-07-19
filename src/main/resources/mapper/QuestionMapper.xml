@@ -17,9 +17,9 @@
   
   
 
-  <insert id="saveQuestion" parameterType="com.briup.app02.bean.Question">
+  <insert id="saveQuestion"  useGeneratedKeys="true" keyProperty="id" parameterType="com.briup.app02.bean.Question">
   insert into poll_question 	
-  values (#{id},#{name},#{questiontype})
+  values (null,#{name},#{questiontype})
 </insert>
 
 

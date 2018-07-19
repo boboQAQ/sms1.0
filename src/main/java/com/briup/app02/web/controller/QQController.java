@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.briup.app02.bean.QQ;
+
 import com.briup.app02.service.IQQService;
 import com.briup.app02.util.MsgResponse;
 
+import io.swagger.annotations.Api;
+
+@Api(description="QQ问卷相关接口")
 @RestController
 @RequestMapping("/qq")
 public class QQController {
 	@Autowired
 	private IQQService qqService;
+	
 	@GetMapping("findQQAll")
 	public MsgResponse findQQAll() {
 		try {

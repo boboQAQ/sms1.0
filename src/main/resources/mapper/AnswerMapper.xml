@@ -19,7 +19,7 @@
 
   <insert id="saveAnswer" parameterType="com.briup.app02.bean.Answer">
   insert into poll_answer 	
-  values (#{id},#{selection},#{check1},#{content},#{survey_id})
+  values (null,#{selection},#{check1},#{content},#{survey_id})
 </insert>
 
 

@@ -21,7 +21,7 @@ public class AnswerServiceImpl implements IAnswerService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_Answer为空");
 		}
 	}
 

@@ -9,6 +9,9 @@
   <select id="findQQAll" resultType="com.briup.app02.bean.QQ">
     select * from poll_qq
   </select>
+  <select id="findByQuestionnaireId" resultType="Long">
+    select question _id from poll_qq where questionnaire_id={id}
+  </select>
 
   <select id="findQQById" parameterType="long" resultType="com.briup.app02.bean.QQ">
     select * from poll_qq where id=#{id}
@@ -19,7 +22,7 @@
 
   <insert id="saveQQ" parameterType="com.briup.app02.bean.QQ">
   insert into poll_qq 	
-  values (#{id},#{question_id},#{questionnaire_id})
+  values (null,#{question_id},#{questionnaire_id})
 </insert>
 
 

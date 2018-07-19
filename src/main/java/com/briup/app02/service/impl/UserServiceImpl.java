@@ -21,7 +21,7 @@ public class UserServiceImpl implements IUserService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_user为空");
 		}
 	}
 

@@ -19,7 +19,7 @@
 
   <insert id="saveSchool" parameterType="com.briup.app02.bean.School">
   insert into poll_school 	
-  values (#{id},#{name},#{description},#{address},#{telephone},#{copyright})
+  values (null,#{name},#{description},#{address},#{telephone},#{copyright})
 </insert>
 
 

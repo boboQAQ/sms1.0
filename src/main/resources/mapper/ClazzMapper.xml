@@ -19,7 +19,7 @@
 
   <insert id="saveClazz" parameterType="com.briup.app02.bean.Clazz">
   insert into poll_clazz  	
-  values (#{id},#{name},#{description},#{grade_id},#{user_id})
+  values (null,#{name},#{description},#{grade_id},#{user_id})
 </insert>
 
 

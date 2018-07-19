@@ -8,6 +8,8 @@ import com.briup.app02.bean.Option;
 
 public interface OptionMapper {
 	List<Option> findOptionAll();
+	List<Option> findByQuestionId(Long id);
+	
 	Option findOptionById(Long id);
 	void updateOption(Option option);
 	void saveOption(Option option);

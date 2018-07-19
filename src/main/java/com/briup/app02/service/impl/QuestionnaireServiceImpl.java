@@ -6,12 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.briup.app02.bean.Questionnaire;
+import com.briup.app02.bean.vm.QuestionnaireVM;
 import com.briup.app02.dao.QuestionnaireMapper;
+import com.briup.app02.dao.extend.QuestionnaireVMMapper;
 import com.briup.app02.service.IQuestionnaireService;
 @Service
 public class QuestionnaireServiceImpl implements IQuestionnaireService{
 	@Autowired
 	private QuestionnaireMapper questionnaireMapper;
+	@Autowired
+	private QuestionnaireVMMapper questionnaireVMMapper;
 
 	@Override
 	public List<Questionnaire> findQuestionnaireAll() throws Exception {
@@ -21,7 +25,7 @@ public class QuestionnaireServiceImpl implements IQuestionnaireService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_questionnaire为空");
 		}
 	}
 
@@ -75,6 +79,30 @@ public class QuestionnaireServiceImpl implements IQuestionnaireService{
 			throw new Exception("此id不存在");
 		}
 		
+	}
+
+	@Override
+	public List<QuestionnaireVM> findAllQuestionnaireVM() throws Exception {
+		// TODO Auto-generated method stub
+		List<Questionnaire> list=questionnaireMapper.findQuestionnaireAll();
+		if(!list.isEmpty()) {
+			return questionnaireVMMapper.findAllQuestionnaireVM();
+		}else
+		{
+			throw new Exception("poll_questionnaire为空");
+		}
+	}
+
+	@Override
+	public QuestionnaireVM findQuestionnaireByIdVM(Long id) throws Exception {
+		// TODO Auto-generated method stub
+		Questionnaire questionnaire =questionnaireMapper.findQuestionnaireById(id);
+		if(questionnaire!=null) {
+			return questionnaireVMMapper.findQuestionnaireByIdVM(id);
+		}else
+		{
+			throw new Exception("id不存在");
+		}
 	}
 
 }

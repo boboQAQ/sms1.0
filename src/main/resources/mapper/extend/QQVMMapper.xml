@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.extend.QQVMMapper">
+  
+  <select id="findByQuestionVMId" resultMap="QQVMResultMap1">
+    select question_id from poll_qq where questionnaire_id=#{id}
+  </select>
+  <select id="findByQuestionnaireVMId" resultMap="QQVMResultMap2">
+    select questionnaire_id from poll_qq where question_id=#{id}
+  </select>
+  
+  
+  
+  <resultMap type="com.briup.app02.bean.vm.QQVM" id="QQVMResultMap1">
+  
+  	<association  
+  		column="question_id" 
+  		property="questionVM" 
+  		select="com.briup.app02.dao.extend.QuestionVMMapper.findQuestionByIdVM">
+  	</association>
+  
+  </resultMap>
+  <resultMap type="com.briup.app02.bean.vm.QQVM" id="QQVMResultMap2">
+  
+  	
+  	<association  
+  		column="questionnaire_id" 
+  		property="questionnaireVM" 
+  		select="com.briup.app02.dao.extend.QuestionnaireVMMapper.findQuestionnaireByIdVM">
+  	</association>
+  </resultMap>
+  
+  
+</mapper>

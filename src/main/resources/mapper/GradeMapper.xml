@@ -19,7 +19,7 @@
 
   <insert id="saveGrade" parameterType="com.briup.app02.bean.Grade">
   insert into poll_grade  	
-  values (#{id},#{name},#{description})
+  values (null,#{name},#{description})
 </insert>
 
 

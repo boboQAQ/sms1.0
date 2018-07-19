@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.briup.app02.bean.QQ;
+
 import com.briup.app02.dao.QQMapper;
+
 import com.briup.app02.service.IQQService;
 @Service
 public class QQServiceImpl implements IQQService{
 	@Autowired
 	private QQMapper qqMapper;
+	
 
 	@Override
 	public List<QQ> findQQAll() throws Exception {
@@ -21,7 +24,7 @@ public class QQServiceImpl implements IQQService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_qq为空");
 		}
 	}
 
@@ -76,5 +79,9 @@ public class QQServiceImpl implements IQQService{
 		}
 		
 	}
+
+	
+
+	
 
 }

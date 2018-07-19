@@ -6,12 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.briup.app02.bean.Clazz;
+import com.briup.app02.bean.vm.ClazzVM;
 import com.briup.app02.dao.ClazzMapper;
+import com.briup.app02.dao.extend.ClazzVMMapper;
 import com.briup.app02.service.IClazzService;
 @Service
 public class ClazzServiceImpl implements IClazzService{
 	@Autowired
 	private ClazzMapper clazzMapper;
+	@Autowired
+	private ClazzVMMapper clazzVMMapper;
 
 	@Override
 	public List<Clazz> findClazzAll() throws Exception {
@@ -21,7 +25,7 @@ public class ClazzServiceImpl implements IClazzService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_clazz为空");
 		}
 	}
 
@@ -75,6 +79,25 @@ public class ClazzServiceImpl implements IClazzService{
 			throw new Exception("此id不存在");
 		}
 		
+	}
+
+	@Override
+	public List<ClazzVM> findAllClazzVM() throws Exception {
+		// TODO Auto-generated method stub
+		return clazzVMMapper.findAllClazzVM();
+	}
+
+	@Override
+	public ClazzVM findClazzByIdVM(Long id) throws Exception {
+		// TODO Auto-generated method stub
+		Clazz clazz =clazzMapper.findClazzById(id);
+		if(clazz!=null) {
+			return clazzVMMapper.findClazzByIdVM(id);
+		}
+		else
+		{
+			throw new Exception("id不存在");
+		}
 	}
 
 }

@@ -19,7 +19,7 @@
 
   <insert id="saveUser" parameterType="com.briup.app02.bean.User">
   insert into poll_user 	
-  values (#{id},#{name},#{gender},#{birth},#{hiredate})
+  values (null,#{name},#{gender},#{birth},#{hiredate})
 </insert>
 
 

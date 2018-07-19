@@ -21,7 +21,7 @@ public class CourseServiceImpl implements ICourseService{
 			return list;
 		}else
 		{
-			throw new Exception("poll_school为空");
+			throw new Exception("poll_course为空");
 		}
 	}
 

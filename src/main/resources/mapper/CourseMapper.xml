@@ -19,7 +19,7 @@
 
   <insert id="saveCourse" parameterType="com.briup.app02.bean.Course">
   insert into poll_course  	
-  values (#{id},#{name},#{description},#{period})
+  values (null,#{name},#{description},#{period})
 </insert>
 
 
